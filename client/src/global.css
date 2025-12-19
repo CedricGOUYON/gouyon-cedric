@@ -1,45 +1,142 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
-
-* {
-	box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap");
 
 :root {
-	--primary-color: #f1f4f9;
-	--secondary-color: #008080;
-	--accent-color: #ff9800;
-	--text-color: #333;
-	--secondary-hover-color: #006666;
-	--spacing: 20px;
+  --teal-color: #008080;
+  --teal-dark-color: #004d4d;
+  --gold-color: #ffd700;
+  --white-color: #ffffff;
+  --grey-light-color: #f4f4f4;
+  --grey-dark-color: #333333;
+  --bg-details: #f3e5f5;
+}
+
+/* RESET GLOBAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
 }
 
 body {
-	margin: 0;
-	background-color: var(--secondary-color);
-	color: var(--primary-color);
-	font-family: "Baloo 2", cursive;
-	line-height: 1.6;
+  font-family: "Baloo 2", sans-serif;
+  color: var(--grey-dark-color);
+  line-height: 1.6;
+  background-color: #fafafa;
 }
 
-/* Animations globales */
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translateY(-10px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+/* STRUCTURE POUR FOOTER EN BAS */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Toute la hauteur de l'écran */
 }
 
-@keyframes fadeInUp {
-	from {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+.main-content {
+  flex: 1 0 auto; /* Pousse le footer vers le bas */
+  width: 100%;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+/* HERO HARMONISÉ POUR TOUTES LES PAGES */
+.shared-hero,
+.projet-page h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 3rem 1.5rem;
+  background: linear-gradient(135deg, var(--teal-color) 0%, var(--teal-dark-color) 100%);
+  color: var(--white-color);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 128, 128, 0.2);
+}
+
+.shared-hero h1,
+.projet-page h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--white-color);
+  padding: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* CONTENEURS COMMUNS */
+.projet-page,
+.contact-page,
+.cv-page,
+.history-page,
+.skills-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* STYLES DES BLOCS DE TEXTE */
+.projet-page .intro,
+.cv-page .intro,
+.history-page p {
+  margin-bottom: 2rem;
+  padding: 1.8rem;
+  background-color: var(--white-color);
+  border-left: 6px solid var(--teal-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.projet-page .details {
+  margin-bottom: 2.5rem;
+  padding: 1.8rem;
+  background-color: var(--bg-details);
+  border-left: 6px solid var(--teal-dark-color);
+  border-radius: 12px;
+}
+
+/* BOUTONS HARMONISÉS */
+.btn,
+.download-btn,
+.submit-btn {
+  display: inline-block;
+  background-color: var(--teal-color);
+  color: var(--white-color);
+  padding: 14px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
+}
+
+.btn:hover,
+.download-btn:hover,
+.submit-btn:hover {
+  background-color: var(--teal-dark-color);
+  transform: translateY(-3px);
+  color: var(--gold-color);
+}
+
+@media (max-width: 768px) {
+  .shared-hero h1,
+  .projet-page h1 {
+    font-size: 2rem;
+  }
+  .projet-page,
+  .contact-page,
+  .cv-page,
+  .history-page,
+  .skills-container {
+    padding: 1rem;
+  }
 }

@@ -2,8 +2,8 @@
 // import { constants } from "../../../../setup/constants"
 
 export const constants = {
-	ROOT_FOLDER_NAME: "gouyon-cedric",
-	APP_NAME: "gouyon-cedric",
+	ROOT_FOLDER_NAME: "GOUYON Cédric",
+	APP_NAME: "GOUYON Cédric",
 
 	DEFAULT_USER_NAME: "utilisateur",
 	DEFAULT_AVATAR: "/images/avatar_profil.png",

@@ -17,8 +17,11 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.3.8",
+		"@vitejs/plugin-react": "^5.1.2",
 		"concurrently": "^9.2.1",
-		"vite": "^7.2.4",
-		"@vitejs/plugin-react": "^5.1.2"
+		"vite": "^7.2.4"
+	},
+	"dependencies": {
+		"@emailjs/browser": "^4.4.1"
 	}
 }

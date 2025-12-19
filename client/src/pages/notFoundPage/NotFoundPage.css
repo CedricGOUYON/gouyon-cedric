@@ -1,36 +1,36 @@
 .not-found-page {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-	min-height: 100vh;
-	background-color: var(--primary-color);
-	color: var(--secondary-color);
-	padding: 40px;
+  min-height: 100vh;
+  background-color: var(--teal-color);
+  color: var(--white-color);
+  padding: 40px;
 }
 
 .not-found-page h1 {
-	font-size: 2.5rem;
-	margin-bottom: 20px;
-	animation: fadeIn 0.8s ease-out;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: fadeIn 0.8s ease-out;
 }
 
 .not-found-page button {
-	padding: 10px 20px;
-	font-size: 1rem;
-	font-weight: 600;
-	border-radius: 8px;
-	border: 2px solid var(--secondary-color);
-	background-color: var(--secondary-color);
-	color: var(--primary-color);
-	cursor: pointer;
-	transition: all 0.3s ease;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 2px solid var(--white-color);
+  background-color: var(--white-color);
+  color: var(--teal-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .not-found-page button:hover {
-	background-color: var(--primary-color);
-	color: var(--secondary-color);
-	border-color: var(--secondary-color);
+  background-color: var(--teal-color);
+  color: var(--gold-color);
+  border-color: var(--white-color);
 }

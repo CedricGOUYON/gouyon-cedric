@@ -1,0 +1,70 @@
+.history-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Baloo 2", sans-serif;
+}
+
+.history-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--teal-color) 0%, var(--teal-dark-color) 100%);
+  color: var(--white-color);
+  border-radius: 8px;
+
+  box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
+}
+
+.history-page h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--teal-color);
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  border-left: 5px solid var(--teal-color);
+  padding-left: 1rem;
+}
+
+.history-page p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  border-radius: 8px;
+  background-color: var(--white-color);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.history-page p:nth-of-type(even) {
+  background-color: var(--grey-light-color);
+  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.08);
+}
+
+.history-page p:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 128, 128, 0.15);
+}
+
+@media (max-width: 768px) {
+  .history-page {
+    padding: 1rem;
+  }
+
+  .history-page h1 {
+    font-size: 1.8rem;
+    padding: 1.2rem 1rem;
+  }
+
+  .history-page h2 {
+    font-size: 1.4rem;
+  }
+
+  .history-page p {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+}
