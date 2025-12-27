@@ -36,7 +36,7 @@ const prochainement: Project[] = [
 const GalleryProjectsPage = () => {
   return (
     <main className="gallery-page">
-      <section className="shared-hero">
+      <section className="gallery-header">
         <h1>Mes Projets</h1>
         <p>Laissez-vous guider par mon parcours à travers mes projets les plus récents. Cette galerie reflète mon évolution en tant que développeur, mêlant défis scolaires structurés et solutions innovantes.</p>
       </section>

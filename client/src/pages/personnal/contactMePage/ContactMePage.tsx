@@ -63,7 +63,7 @@ function ContactPage() {
           </div>
           <div className="info-item">
             <h2>Cédric Gouyon</h2>
-            <h3>Développeur Full Stack</h3>
+            <h3>Développeur web/web mobile FullStack</h3>
             <p>Je serais ravi de discuter avec vous des opportunités de collaboration et de vous présenter plus en détail comment je peux contribuer à votre entreprise</p>
           </div>
 

@@ -19,6 +19,7 @@
   font-weight: 700;
   color: var(--white-color);
   height: auto;
+  margin: 0;
 }
 
 .title {
@@ -102,6 +103,9 @@ section h2 {
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  .skills-header h2 {
+    font-size: 1.8rem;
   }
 }
