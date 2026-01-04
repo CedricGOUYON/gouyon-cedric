@@ -1,7 +1,7 @@
 function PortfolioUnPage() {
   return (
     <main className="projet-page">
-      <h1>Projet : Portfolio v1</h1>
+      <h1>Projet : Mon premier portfolio</h1>
 
       <section className="intro">
         <p>Ce projet marque la création de ma toute première identité numérique en tant que développeur. L'objectif était de concevoir un espace personnel pour centraliser mes compétences, mon parcours et mes premières réalisations. Entièrement réalisé à la main, ce portfolio m'a permis de consolider mes bases en développement front-end et de mettre en place une interface claire et professionnelle.</p>
