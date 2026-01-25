@@ -1,13 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GOOUYON Cédric</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content;">
+
+	<title>GOUYON Cédric - Développeur Fullstack</title>
+	<meta name="description" content="Découvrez le portfolio de GOUYON Cédric, développeur Fullstack spécialisé en React et Node.js." />
+	<link rel="canonical" href="https://gouyon-cedric.onrender.com/" />
+
+	<link rel="preconnect" href="https://www.googletagmanager.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap">
+	<link rel="icon" type="image/png" href="/assets/favicon/favicon.png" />
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-K3B9749HKQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(...args) { window.dataLayer.push(args); }
+		gtag('js', new Date());
+		gtag('config', 'G-K3B9749HKQ');
+	</script>
+
+	<style>
+		:root { --grey-dark-color: #333333; }
+		html, body { 
+			margin: 0; padding: 0;
+			background-color: #fafafa;
+			color: var(--grey-dark-color);
+			font-family: "Baloo 2", system-ui, sans-serif;
+			text-rendering: optimizeLegibility;
+			-webkit-font-smoothing: antialiased;
+		}
+		#root { min-height: 100vh; display: flex; flex-direction: column; }
+		/* Accessibilité : lien d'évitement masqué */
+		.sr-only-focusable:not(:focus):not(:active) {
+			clip: rect(0 0 0 0);
+			clip-path: inset(50%);
+			height: 1px;
+			overflow: hidden;
+			position: absolute;
+			white-space: nowrap;
+			width: 1px;
+		}
+	</style>
+</head>
+<body>
+	<a href="#root" class="sr-only-focusable">Passer au contenu</a>
+	<div id="root"></div>
+	<script type="module" src="/src/main.tsx"></script>
+</body>
 </html>

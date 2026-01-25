@@ -13,6 +13,7 @@
 	"dependencies": {
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0",
+		"react-ga4": "^2.1.0",
 		"react-pdf": "^10.2.0",
 		"react-router": "^7.10.1",
 		"react-toastify": "^11.0.5"
@@ -24,6 +25,7 @@
 		"@types/react-dom": "^19.2.3",
 		"@types/react-router": "^5.1.20",
 		"@types/react-toastify": "^4.0.2",
+		"@types/terser": "^3.8.1",
 		"@vitejs/plugin-react": "^5.1.2",
 		"eslint": "^9.39.1",
 		"eslint-plugin-react-hooks": "^7.0.1",
@@ -31,6 +33,7 @@
 		"globals": "^16.5.0",
 		"typescript": "~5.9.3",
 		"typescript-eslint": "^8.46.4",
-		"vite": "^7.2.4"
+		"vite": "^7.2.4",
+		"vite-plugin-compression": "^0.5.1"
 	}
 }

@@ -1,39 +1,57 @@
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { Outlet, useLocation } from "react-router";
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
 import { constants } from "../../setup/constants";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
-  const { pathname } = useLocation();
+	const { pathname } = useLocation();
 
-  useEffect(() => {
-    const appName = constants.APP_NAME;
-    document.title = appName;
-  }, []);
+	useEffect(() => {
+		const formatTitle = (path: string): string => {
+			if (!path || path === "/") return "Accueil";
+			return path
+				.replace("/", "")
+				.split("-")
+				.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+				.join(" ");
+		};
 
-  useEffect(() => {
-    if (pathname) {
-      window.scrollTo(0, 0);
-    }
-  }, [pathname]);
+		const pageTitle = formatTitle(pathname);
+		const fullTitle = `${pageTitle} | ${constants.APP_NAME}`;
 
-  return (
-    <>
-      <div className="app-container">
-        <Header />
-        <main className="main-content">
-          <Outlet />
-        </main>
-        <Footer />
-      </div>
+		document.title = fullTitle;
+		window.scrollTo(0, 0);
 
-      <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
-    </>
-  );
+		if (typeof window.gtag === "function") {
+			window.gtag("config", "G-K3B9749HKQ", {
+				page_title: fullTitle,
+				page_path: pathname,
+			});
+		}
+	}, [pathname]);
+
+	return (
+		<div className="app-container">
+			<Header />
+			<main className="main-content">
+				<Suspense fallback={<div aria-busy="true" className="loader-fallback" />}>
+					<Outlet />
+				</Suspense>
+			</main>
+			<Footer />
+			<ToastContainer
+				position="top-center"
+				autoClose={3000}
+				theme="colored"
+				closeOnClick
+				pauseOnHover
+			/>
+		</div>
+	);
 }
 
 export default App;

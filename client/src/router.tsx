@@ -1,53 +1,85 @@
+import { lazy } from "react";
 import { createBrowserRouter } from "react-router";
-import HomePage from "../src/pages/homePage/HomePage";
-import NotFoundPage from "../src/pages/notFoundPage/NotFoundPage";
 import App from "./App";
-import ContactMePage from "./pages/personnal/contactMePage/ContactMePage";
-import MyCVPage from "./pages/personnal/cvPage/MyCvPage";
-import MyHistory from "./pages/personnal/HistoryPage/MyHistoryPage";
-import MySkillsPage from "./pages/personnal/skillsPage/MySkillsPage";
-import CoreexMenuiseriePage from "./pages/projects/CoreexMenuiseriePage/CoreexMenuiseriePage";
-import FullstackStarterKitPage from "./pages/projects/fullstackStarterKitPage/FullstackStarterKitPage";
-import GalleryProjectsPage from "./pages/projects/GalleryProjectsPage";
-import GouyonCedricPage from "./pages/projects/gouyonCedricPage/GouyonCedricPage";
-import PortfolioPage from "./pages/projects/portfolioPage/PortfolioPage";
-import SchoolClickDevPage from "./pages/projects/schoolClickDevPage/SchoolClickDevPage";
-import SchoolKartAlgoPage from "./pages/projects/schoolKartAlgoPage/SchoolKartAlgoPage";
-import SchoolPackAndGoPage from "./pages/projects/schoolPackAndGoPage/SchoolPackAndGoPage";
-import SchoolSeanZPage from "./pages/projects/schoolSeanZPage/SchoolSeanZPage";
-import SchoolStreamFlixPage from "./pages/projects/schoolStreamFlixPage/SchoolStreamFlixPage";
-import TealiiPage from "./pages/projects/tealiiPage/TealiiPage";
+
+// Pages de base
+const HomePage = lazy(() => import("./pages/homePage/HomePage"));
+const NotFoundPage = lazy(() => import("./pages/notFoundPage/NotFoundPage"));
+
+// Pages Personnelles
+const ContactMePage = lazy(
+	() => import("./pages/personnal/contactMePage/ContactMePage"),
+);
+const MyCVPage = lazy(() => import("./pages/personnal/cvPage/MyCvPage"));
+const MyHistory = lazy(
+	() => import("./pages/personnal/HistoryPage/MyHistoryPage"),
+);
+const MySkillsPage = lazy(
+	() => import("./pages/personnal/skillsPage/MySkillsPage"),
+);
+
+// Pages Projets
+const CoreexMenuiseriePage = lazy(
+	() => import("./pages/projects/CoreexMenuiseriePage/CoreexMenuiseriePage"),
+);
+const FullstackStarterKitPage = lazy(
+	() =>
+		import("./pages/projects/fullstackStarterKitPage/FullstackStarterKitPage"),
+);
+const GalleryProjectsPage = lazy(
+	() => import("./pages/projects/GalleryProjectsPage"),
+);
+const GouyonCedricPage = lazy(
+	() => import("./pages/projects/gouyonCedricPage/GouyonCedricPage"),
+);
+const PortfolioPage = lazy(
+	() => import("./pages/projects/portfolioPage/PortfolioPage"),
+);
+const SchoolClickDevPage = lazy(
+	() => import("./pages/projects/schoolClickDevPage/SchoolClickDevPage"),
+);
+const SchoolKartAlgoPage = lazy(
+	() => import("./pages/projects/schoolKartAlgoPage/SchoolKartAlgoPage"),
+);
+const SchoolPackAndGoPage = lazy(
+	() => import("./pages/projects/schoolPackAndGoPage/SchoolPackAndGoPage"),
+);
+const SchoolSeanZPage = lazy(
+	() => import("./pages/projects/schoolSeanZPage/SchoolSeanZPage"),
+);
+const SchoolStreamFlixPage = lazy(
+	() => import("./pages/projects/schoolStreamFlixPage/SchoolStreamFlixPage"),
+);
+const TealiiPage = lazy(() => import("./pages/projects/tealiiPage/TealiiPage"));
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <NotFoundPage />,
-    children: [
-      { index: true, element: <HomePage /> },
-      { path: "projects", element: <GalleryProjectsPage /> },
-
-      { path: "portfolio", element: <PortfolioPage /> },
-      { path: "coreex-menuiserie", element: <CoreexMenuiseriePage /> },
-      { path: "fullstack-starter-kit", element: <FullstackStarterKitPage /> },
-      { path: "gouyon-cedric", element: <GouyonCedricPage /> },
-      { path: "school-clickdev", element: <SchoolClickDevPage /> },
-      { path: "school-kartalgo", element: <SchoolKartAlgoPage /> },
-      { path: "school-packandgo", element: <SchoolPackAndGoPage /> },
-      { path: "school-seanz", element: <SchoolSeanZPage /> },
-      { path: "school-streamflix", element: <SchoolStreamFlixPage /> },
-      { path: "tealii", element: <TealiiPage /> },
-
-      { path: "my-cv", element: <MyCVPage /> },
-      { path: "my-history", element: <MyHistory /> },
-      { path: "my-skills", element: <MySkillsPage /> },
-      { path: "contact-me", element: <ContactMePage /> },
-    ],
-  },
-  {
-    path: "*",
-    element: <NotFoundPage />,
-  },
+	{
+		path: "/",
+		element: <App />,
+		errorElement: <NotFoundPage />,
+		children: [
+			{ index: true, element: <HomePage /> },
+			{ path: "projects", element: <GalleryProjectsPage /> },
+			{ path: "portfolio", element: <PortfolioPage /> },
+			{ path: "coreex-menuiserie", element: <CoreexMenuiseriePage /> },
+			{ path: "fullstack-starter-kit", element: <FullstackStarterKitPage /> },
+			{ path: "gouyon-cedric", element: <GouyonCedricPage /> },
+			{ path: "school-clickdev", element: <SchoolClickDevPage /> },
+			{ path: "school-kartalgo", element: <SchoolKartAlgoPage /> },
+			{ path: "school-packandgo", element: <SchoolPackAndGoPage /> },
+			{ path: "school-seanz", element: <SchoolSeanZPage /> },
+			{ path: "school-streamflix", element: <SchoolStreamFlixPage /> },
+			{ path: "tealii", element: <TealiiPage /> },
+			{ path: "my-cv", element: <MyCVPage /> },
+			{ path: "my-history", element: <MyHistory /> },
+			{ path: "my-skills", element: <MySkillsPage /> },
+			{ path: "contact-me", element: <ContactMePage /> },
+		],
+	},
+	{
+		path: "*",
+		element: <NotFoundPage />,
+	},
 ]);
 
 export default router;

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gouyon-cedric.onrender.com/sitemap.xml
