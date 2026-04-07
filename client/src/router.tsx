@@ -7,34 +7,21 @@ const HomePage = lazy(() => import("./pages/homePage/HomePage"));
 const NotFoundPage = lazy(() => import("./pages/notFoundPage/NotFoundPage"));
 
 // Pages Personnelles
-const ContactMePage = lazy(
-	() => import("./pages/personnal/contactMePage/ContactMePage"),
-);
+const ContactMePage = lazy(() => import("./pages/personnal/contactMePage/ContactMePage"));
 const MyCVPage = lazy(() => import("./pages/personnal/cvPage/MyCvPage"));
-const MyHistory = lazy(
-	() => import("./pages/personnal/HistoryPage/MyHistoryPage"),
-);
-const MySkillsPage = lazy(
-	() => import("./pages/personnal/skillsPage/MySkillsPage"),
-);
+const MyHistory = lazy(() => import("./pages/personnal/HistoryPage/MyHistoryPage"));
+const MySkillsPage = lazy(() => import("./pages/personnal/skillsPage/MySkillsPage"));
 
 // Pages Projets
 const CoreexMenuiseriePage = lazy(
 	() => import("./pages/projects/CoreexMenuiseriePage/CoreexMenuiseriePage"),
 );
 const FullstackStarterKitPage = lazy(
-	() =>
-		import("./pages/projects/fullstackStarterKitPage/FullstackStarterKitPage"),
+	() => import("./pages/projects/fullstackStarterKitPage/FullstackStarterKitPage"),
 );
-const GalleryProjectsPage = lazy(
-	() => import("./pages/projects/GalleryProjectsPage"),
-);
-const GouyonCedricPage = lazy(
-	() => import("./pages/projects/gouyonCedricPage/GouyonCedricPage"),
-);
-const PortfolioPage = lazy(
-	() => import("./pages/projects/portfolioPage/PortfolioPage"),
-);
+const GalleryProjectsPage = lazy(() => import("./pages/projects/GalleryProjectsPage"));
+const GouyonCedricPage = lazy(() => import("./pages/projects/gouyonCedricPage/GouyonCedricPage"));
+const PortfolioPage = lazy(() => import("./pages/projects/portfolioPage/PortfolioPage"));
 const SchoolClickDevPage = lazy(
 	() => import("./pages/projects/schoolClickDevPage/SchoolClickDevPage"),
 );
@@ -44,9 +31,7 @@ const SchoolKartAlgoPage = lazy(
 const SchoolPackAndGoPage = lazy(
 	() => import("./pages/projects/schoolPackAndGoPage/SchoolPackAndGoPage"),
 );
-const SchoolSeanZPage = lazy(
-	() => import("./pages/projects/schoolSeanZPage/SchoolSeanZPage"),
-);
+const SchoolSeanZPage = lazy(() => import("./pages/projects/schoolSeanZPage/SchoolSeanZPage"));
 const SchoolStreamFlixPage = lazy(
 	() => import("./pages/projects/schoolStreamFlixPage/SchoolStreamFlixPage"),
 );

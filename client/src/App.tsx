@@ -7,6 +7,12 @@ import Header from "./components/header/Header";
 
 import "react-toastify/dist/ReactToastify.css";
 
+declare global {
+	interface Window {
+		gtag?: (command: string, id: string, config?: object) => void;
+	}
+}
+
 function App() {
 	const { pathname } = useLocation();
 
@@ -24,7 +30,7 @@ function App() {
 		const fullTitle = `${pageTitle} | ${constants.APP_NAME}`;
 
 		document.title = fullTitle;
-		window.scrollTo(0, 0);
+		window.scrollTo({ top: 0, behavior: "instant" });
 
 		if (typeof window.gtag === "function") {
 			window.gtag("config", "G-K3B9749HKQ", {
@@ -37,19 +43,13 @@ function App() {
 	return (
 		<div className="app-container">
 			<Header />
-			<main className="main-content">
-				<Suspense fallback={<div aria-busy="true" className="loader-fallback" />}>
+			<main className="main-content" style={{ minHeight: "80vh" }}>
+				<Suspense fallback={<div aria-busy="true" style={{ height: "50vh" }} />}>
 					<Outlet />
 				</Suspense>
 			</main>
 			<Footer />
-			<ToastContainer
-				position="top-center"
-				autoClose={3000}
-				theme="colored"
-				closeOnClick
-				pauseOnHover
-			/>
+			<ToastContainer position="top-center" autoClose={3000} theme="colored" />
 		</div>
 	);
 }
